@@ -79,7 +79,7 @@ function () {
 
         game.ballRadius = 10;
         game.paddleHeight = 10;
-        game.paddleWidth = 75;
+        game.paddleWidth = 150;
         game.brickWidth = 75;
         game.brickHeight = 20;
         game.brickPadding = 10;
@@ -129,7 +129,7 @@ function () {
     game.drawBall = function () {
         ctx.beginPath();
         ctx.arc(game.x, game.y, game.ballRadius, 0, Math.PI * 2);
-        ctx.fillStyle = "#0095DD";
+        ctx.fillStyle = "#ff6200";
         ctx.fill();
         ctx.closePath();
     };
@@ -137,7 +137,7 @@ function () {
     game.drawPaddle = function () {
         ctx.beginPath();
         ctx.rect(game.paddleX, canvas.height - game.paddleHeight, game.paddleWidth, game.paddleHeight);
-        ctx.fillStyle = "#0095DD";
+        ctx.fillStyle = "#ff6200";
         ctx.fill();
         ctx.closePath();
     };
@@ -152,7 +152,7 @@ function () {
                     game.bricks[c][r].y = brickY;
                     ctx.beginPath();
                     ctx.rect(brickX, brickY, game.brickWidth, game.brickHeight);
-                    ctx.fillStyle = "#0095DD";
+                    ctx.fillStyle = "#ff6200";
                     ctx.fill();
                     ctx.closePath();
                 }
@@ -162,13 +162,13 @@ function () {
 
     game.drawScore = function () {
         ctx.font = "16px Arial";
-        ctx.fillStyle = "#0095DD";
+        ctx.fillStyle = "#ff6200";
         ctx.fillText("Score: " + game.score, 8, 20);
     };
 
     game.drawLives = function () {
         ctx.font = "16px Arial";
-        ctx.fillStyle = "#0095DD";
+        ctx.fillStyle = "#ff6200";
         ctx.fillText("Lives: " + game.lives, canvas.width - 65, 20);
     };
 
